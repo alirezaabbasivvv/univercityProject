@@ -1,0 +1,16 @@
+﻿@model univercityProject.Models.Dtos.RequestViewModel
+
+@{
+    ViewData["Title"] = "Accept Request";
+}
+
+<h2>Accept Request</h2>
+
+<form asp-action="ManagerAcceptRequest" method="post">
+    <div class="form-group">
+        <label asp-for="Doscription" class="control-label"></label>
+        <textarea asp-for="Doscription" class="form-control"></textarea>
+        <span asp-validation-for="Doscription" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Accept</button>
+</form>
